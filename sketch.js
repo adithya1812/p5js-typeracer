@@ -498,7 +498,7 @@ function keyTyped() {
     result += key;
   } else if (keyCode == 187) {
     result += key;
-  } else if (keyCode == 8 || 46 || 13) {
+  } else if (keyCode == BACKSPACE) {
     result = result.substring(0, result.length - 1);
     total -= 1;
   }
