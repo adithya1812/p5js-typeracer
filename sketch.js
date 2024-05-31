@@ -314,7 +314,6 @@ function draw() {
       " " +
       selectedNoun50;
   }
-  console.log(result.length);
   if (result == "Adithya is the best") {
     ans = result;
     colour = "#E0E1DD";
@@ -394,113 +393,20 @@ function draw() {
     endTime = millis();
   }
 }
-function keyTyped() {
+function keyPressed() {
   total += 1;
-  if (key == ans[pos]) {
-    pos += 1;
-    colour = "#E1E0DD";
-  } else {
-    colour = "red";
-  }
-  if (keyCode == 65) {
-    result += key;
-  } else if (keyCode == 66) {
-    result += key;
-  } else if (keyCode == 67) {
-    result += key;
-  } else if (keyCode == 68) {
-    result += key;
-  } else if (keyCode == 69) {
-    result += key;
-  } else if (keyCode == 70) {
-    result += key;
-  } else if (keyCode == 71) {
-    result += key;
-  } else if (keyCode == 72) {
-    result += key;
-  } else if (keyCode == 73) {
-    result += key;
-  } else if (keyCode == 74) {
-    result += key;
-  } else if (keyCode == 75) {
-    result += key;
-  } else if (keyCode == 76) {
-    result += key;
-  } else if (keyCode == 77) {
-    result += key;
-  } else if (keyCode == 78) {
-    result += key;
-  } else if (keyCode == 79) {
-    result += key;
-  } else if (keyCode == 80) {
-    result += key;
-  } else if (keyCode == 81) {
-    result += key;
-  } else if (keyCode == 82) {
-    result += key;
-  } else if (keyCode == 83) {
-    result += key;
-  } else if (keyCode == 84) {
-    result += key;
-  } else if (keyCode == 85) {
-    result += key;
-  } else if (keyCode == 86) {
-    result += key;
-  } else if (keyCode == 87) {
-    result += key;
-  } else if (keyCode == 88) {
-    result += key;
-  } else if (keyCode == 89) {
-    result += key;
-  } else if (keyCode == 90) {
-    result += key;
-  } else if (keyCode == 32) {
-    result += key;
-  } else if (keyCode == 48) {
-    result += key;
-  } else if (keyCode == 49) {
-    result += key;
-  } else if (keyCode == 50) {
-    result += key;
-  } else if (keyCode == 51) {
-    result += key;
-  } else if (keyCode == 52) {
-    result += key;
-  } else if (keyCode == 53) {
-    result += key;
-  } else if (keyCode == 54) {
-    result += key;
-  } else if (keyCode == 55) {
-    result += key;
-  } else if (keyCode == 56) {
-    result += key;
-  } else if (keyCode == 57) {
-    result += key;
-  } else if (keyCode == 222) {
-    result += key;
-  } else if (keyCode == 189) {
-    result += key;
-  } else if (keyCode == 188) {
-    result += key;
-  } else if (keyCode == 190) {
-    result += key;
-  } else if (keyCode == 191) {
-    result += key;
-  } else if (keyCode == 186) {
-    result += key;
-  } else if (keyCode == 219) {
-    result += key;
-  } else if (keyCode == 220) {
-    result += key;
-  } else if (keyCode == 221) {
-    result += key;
-  } else if (keyCode == 192) {
-    result += key;
-  } else if (keyCode == 187) {
+  if (key.length == 1) {
     result += key;
   } else if (keyCode == BACKSPACE) {
     result = result.substring(0, result.length - 1);
     total -= 1;
+    pos -= 1;
+  }
+  if (result[pos] == ans[pos]) {
+    pos += 1;
+    colour = "#E1E0DD";
+  } else {
+    colour = "red";
   }
 }
 
